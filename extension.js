@@ -6,7 +6,6 @@ class MultiplayerExtension {
             id: 'multiplayer',
             name: 'Multiplayer',
             blocks: [
-                // Existing blocks
                 {
                     opcode: 'connect',
                     blockType: Scratch.BlockType.COMMAND,
@@ -194,9 +193,6 @@ class MultiplayerExtension {
         };
     }
 
-    // ... (existing methods)
-
-    // New methods for multiplayer blocks
     broadcast(args) {
         if (this.socket && this.connected) {
             this.socket.send(JSON.stringify({
